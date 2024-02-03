@@ -58,7 +58,7 @@ combination of data security, processing speed and encryption granularity.
 
 ### How it works
 
-The Parquet writer generates a DEK (data encryption keys) for each plaintext chunk to be encrypted,
+The Parquet writer generates a DEK (data encryption key) for each plaintext chunk to be encrypted,
 encrypts the plaintext chunk, then sends the DEK to the KMS (key management service) to be wrapped
 by the chosen KEK (key encryption key). The KMS returns the wrapped DEK to the Parquet writer, which
 stores the wrapped DEK alongside the corresponding ciphertext chunk.
