@@ -158,3 +158,5 @@ KMS](https://docs.aws.amazon.com/kms/), [GCP Cloud KMS](https://cloud.google.com
 
 * [One Stone, Three Birds: Finer-Grained Encryption with Apache Parquet @ Large
   Scale](https://doi.org/10.1109/BigData55660.2022.10020987)
+
+    * [PDF](https://drive.google.com/file/d/13u2cVsntS_jvVFH8a_iLQt-TnvVj8A0G/view?usp=drive_link)
