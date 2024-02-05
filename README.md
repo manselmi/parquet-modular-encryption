@@ -87,7 +87,7 @@ Launch the KMS (key management service).
 ./kms_server.py
 ```
 
-Explore the KMS' [Swagger UI](http://localhost:8001/docs). Try POSTing the JSON payload
+Explore the KMS' [OpenAPI specification](http://localhost:8001/docs). Try POSTing the JSON payload
 
 ``` json
 {
