@@ -92,28 +92,28 @@
 *.tar.gz
 *.war
 *.zip
-.mtj.tmp
+.mtj.tmp/
 hs_err_pid*
 replay_pid*
 
 # JBoss
 #   https://github.com/github/gitignore/blob/main/JBoss.gitignore
 *.DEPLOYED
-jboss/server/all/data/**/*
+jboss/server/all/data/
 jboss/server/all/deploy/project.ext
 jboss/server/all/log/*.log
-jboss/server/all/tmp/**/*
-jboss/server/all/work/**/*
-jboss/server/default/data/**/*
+jboss/server/all/tmp/
+jboss/server/all/work/
+jboss/server/default/data/
 jboss/server/default/deploy/project.ext
 jboss/server/default/log/*.log
-jboss/server/default/tmp/**/*
-jboss/server/default/work/**/*
-jboss/server/minimal/data/**/*
+jboss/server/default/tmp/
+jboss/server/default/work/
+jboss/server/minimal/data/
 jboss/server/minimal/deploy/project.ext
 jboss/server/minimal/log/*.log
-jboss/server/minimal/tmp/**/*
-jboss/server/minimal/work/**/*
+jboss/server/minimal/tmp/
+jboss/server/minimal/work/
 
 # JetBrains
 #   https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
@@ -122,7 +122,7 @@ jboss/server/minimal/work/**/*
 .idea/**/contentModel.xml
 .idea/**/dataSources.ids
 .idea/**/dataSources.local.xml
-.idea/**/dataSources
+.idea/**/dataSources/
 .idea/**/dbnavigator.xml
 .idea/**/dictionaries
 .idea/**/dynamic.xml
@@ -138,15 +138,15 @@ jboss/server/minimal/work/**/*
 .idea/caches/build_file_checksums.ser
 .idea/httpRequests
 .idea/replstate.xml
-.idea/sonarlint
-.idea_modules
+.idea/sonarlint/
+.idea_modules/
 atlassian-ide-plugin.xml
-cmake-build-*
+cmake-build-*/
 com_crashlytics_export_strings.xml
 crashlytics-build.properties
 crashlytics.properties
 fabric.properties
-out
+out/
 
 # Linux
 #   https://github.com/github/gitignore/blob/main/Global/Linux.gitignore
@@ -154,29 +154,29 @@ out
 .directory
 .fuse_hidden*
 .nfs*
-.Trash
-.Trash-*
+.Trash/
+.Trash-*/
 
 # macOS
 #   https://github.com/github/gitignore/blob/main/Global/macOS.gitignore
-.apdisk
-.AppleDB
-.AppleDesktop
+.apdisk/
+.AppleDB/
+.AppleDesktop/
 .AppleDouble
 .com.apple.timemachine.donotpresent
-.DocumentRevisions-V100
+.DocumentRevisions-V100/
 .DS_Store
-.fseventsd
+.fseventsd/
 .localized
 .LSOverride
-.Spotlight-V100
-.TemporaryItems
-.Trashes
+.Spotlight-V100/
+.TemporaryItems/
+.Trashes/
 .VolumeIcon.icns
 ._*
 Icon[]
-Network Trash Folder
-Temporary Items
+Network Trash Folder/
+Temporary Items/
 
 # Maven
 #   https://github.com/github/gitignore/blob/main/Maven.gitignore
@@ -191,14 +191,14 @@ pom.xml.releaseBackup
 pom.xml.tag
 pom.xml.versionsBackup
 release.properties
-target
+target/
 
 # Python
 #   https://github.com/github/gitignore/blob/main/Python.gitignore
 *$py.class
 *.cover
 *.egg
-*.egg-info
+*.egg-info/
 *.log
 *.manifest
 *.mo
@@ -212,86 +212,86 @@ target
 .coverage
 .coverage[-._]*
 .dmypy.json
-.eggs
+.eggs/
 .env
-.hypothesis
+.hypothesis/
 .installed.cfg
 .ipynb_checkpoints
-.mypy_cache
-.nox
+.mypy_cache/
+.nox/
 .pdm.toml
-.pybuilder
-.pyre
-.pytest_cache
+.pybuilder/
+.pyre/
+.pytest_cache/
 .Python
-.pytype
+.pytype/
 .ropeproject
-.ruff_cache
+.ruff_cache/
 .scrapy
 .spyderproject
 .spyproject
-.tox
+.tox/
 .venv
 .webassets-cache
-/site
-build
+/site/
+build/
 celerybeat-schedule
 celerybeat.pid
-cover
+cover/
 coverage.xml
-cython_debug
+cython_debug/
 db.sqlite3
 db.sqlite3-journal
-develop-eggs
-dist
+develop-eggs/
+dist/
 dmypy.json
-docs/_build
-downloads
-eggs
-env.bak
-env
-htmlcov
-instance
+docs/_build/
+downloads/
+eggs/
+env.bak/
+env/
+htmlcov/
+instance/
 ipython_config.py
-lib
-lib64
+lib/
+lib64/
 local_settings.py
 MANIFEST
 nosetests.xml
-parts
+parts/
 pip-delete-this-directory.txt
 pip-log.txt
-profile_default
-sdist
-share/python-wheels
-target
-var
-venv.bak
-venv
-wheels
-__pycache__
-__pypackages__
+profile_default/
+sdist/
+share/python-wheels/
+target/
+var/
+venv.bak/
+venv/
+wheels/
+__pycache__/
+__pypackages__/
 
 # R
 #   https://github.com/github/gitignore/blob/main/R.gitignore
 *-Ex.R
 *.knit.md
 *.utf8.md
-*_cache
+*_cache/
 .httr-oauth
 .Rapp.history
 .RData
 .RDataTmp
 .Renviron
 .Rhistory
-.Rproj.user
+.Rproj.user/
 .Ruserdata
-/*.Rcheck
+/*.Rcheck/
 /*.tar.gz
-/cache
-docs
+/cache/
+docs/
 po/*~
-rsconnect
+rsconnect/
 vignettes/*.html
 vignettes/*.pdf
 
@@ -302,19 +302,19 @@ vignettes/*.pdf
 
 # Syncthing
 #   https://github.com/github/gitignore/blob/main/Global/Syncthing.gitignore
-.stfolder
+.stfolder/
 .stignore
-.stversions
+.stversions/
 
 # Terraform
 #   https://github.com/github/gitignore/blob/main/Terraform.gitignore
-**/.terraform/*
 *.tfstate
 *.tfstate.*
 *.tfvars
 *.tfvars.json
 *_override.tf
 *_override.tf.json
+.terraform/
 .terraformrc
 crash.*.log
 crash.log
@@ -341,7 +341,8 @@ tags
 # Visual Studio Code
 #   https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
 *.vsix
-.history
+.history/
+.vscode-server/
 .vscode/*
 !.vscode/*.code-snippets
 !.vscode/extensions.json
@@ -351,7 +352,7 @@ tags
 
 # Windows
 #   https://github.com/github/gitignore/blob/main/Global/Windows.gitignore
-$RECYCLE.BIN
+$RECYCLE.BIN/
 *.cab
 *.lnk
 *.msi
