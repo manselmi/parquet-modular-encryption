@@ -262,6 +262,7 @@ downloads/
 eggs/
 env.bak/
 ENV/
+env/
 envs/
 htmlcov/
 instance/
