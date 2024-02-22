@@ -19,7 +19,7 @@ cffi==1.16.0
     # via cryptography
 click==8.1.7
     # via uvicorn
-cryptography==42.0.3
+cryptography==42.0.4
     # via -r requirements.in
 fastapi==0.109.2
     # via -r requirements.in
@@ -27,11 +27,11 @@ h11==0.14.0
     # via
     #   httpcore
     #   uvicorn
-httpcore==1.0.3
+httpcore==1.0.4
     # via httpx
 httptools==0.6.1
     # via uvicorn
-httpx==0.26.0
+httpx==0.27.0
     # via -r requirements.in
 idna==3.6
     # via
