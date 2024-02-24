@@ -43,11 +43,11 @@ pyarrow==15.0.0
     # via -r requirements.in
 pycparser==2.21
     # via cffi
-pydantic==2.6.1
+pydantic==2.6.2
     # via
     #   -r requirements.in
     #   fastapi
-pydantic-core==2.16.2
+pydantic-core==2.16.3
     # via pydantic
 python-dotenv==1.0.1
     # via uvicorn
