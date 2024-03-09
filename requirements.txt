@@ -39,7 +39,7 @@ idna==3.6
     #   httpx
 numpy==1.26.4
     # via pyarrow
-pyarrow==15.0.0
+pyarrow==15.0.1
     # via -r requirements.in
 pycparser==2.21
     # via cffi
@@ -64,7 +64,7 @@ typing-extensions==4.10.0
     #   fastapi
     #   pydantic
     #   pydantic-core
-uvicorn==0.27.1
+uvicorn==0.28.0
     # via -r requirements.in
 uvloop==0.19.0
     # via uvicorn
