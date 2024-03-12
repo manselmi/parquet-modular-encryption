@@ -43,7 +43,7 @@ pyarrow==15.0.1
     # via -r requirements.in
 pycparser==2.21
     # via cffi
-pydantic==2.6.3
+pydantic==2.6.4
     # via
     #   -r requirements.in
     #   fastapi
