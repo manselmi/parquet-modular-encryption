@@ -1,0 +1,18 @@
+version: '3'
+
+tasks:
+
+  venv:
+    cmds:
+      - 'rm -fr -- venv'
+      - 'python3.12 -m venv -- venv'
+      - 'printf %s "Signature: 8a477f597d28d172789f06886806bc55" > venv/CACHEDIR.TAG'
+      - 'venv/bin/python -m pip install --progress-bar=off --upgrade -- pip setuptools wheel'
+      - 'venv/bin/python -m pip install --progress-bar=off --no-deps -r requirements.txt'
+      - 'venv/bin/python -m pip check'
+      - 'touch -- venv/_SUCCESS'
+    sources:
+      - 'requirements.txt'
+    generates:
+      - 'venv/CACHEDIR.TAG'
+      - 'venv/_SUCCESS'

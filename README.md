@@ -69,14 +69,13 @@ the DEK.
 
 ## Prerequisites
 
-* Python 3.12. Prepare the environment by running the following code:
+* [Task](https://taskfile.dev)
+
+* Python 3.12. Prepare a virtual environment by running the following code:
 
     ``` shell
-    python3.12 -m venv -- ./venv
+    task venv
     source -- ./venv/bin/activate
-    python -m pip install --upgrade -- pip setuptools wheel
-    python -m pip install --no-deps -r requirements.txt
-    python -m pip check
     ```
 
 ## Example
