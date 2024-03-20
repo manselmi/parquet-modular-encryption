@@ -1,0 +1,67 @@
+version: '3'
+
+set: ['errexit', 'nounset', 'pipefail']
+
+vars:
+  CACHEDIR_TAG: 'CACHEDIR.TAG'
+  PRINTF_CACHEDIR_TAG_CONTENT: 'printf %s Signature:\ 8a477f597d28d172789f06886806bc55'
+  PYTHON_MINOR_VERSION: '3.12'
+  REQUIREMENTS_IN: 'requirements.in'
+  REQUIREMENTS_TXT: 'requirements.txt'
+  # Do not modify VENV. `uv pip sync` assumes that the virtualenv directory is
+  #   * named `.venv`, and
+  #   * located in the current directory.
+  VENV: '.venv'
+
+tasks:
+
+  sync-requirements:
+    aliases: ['venv']
+    deps: ['.task', 'compile-requirements', 'create-venv']
+    cmds:
+      - 'rm -f -- {{ .VENV }}/.sync.success'
+      - 'uv pip sync --strict -- {{ .REQUIREMENTS_TXT }}'
+      - 'touch -- {{ .VENV }}/.sync.success'
+    sources:
+      - '{{ .REQUIREMENTS_TXT }}'
+    status:
+      - 'test -f {{ .VENV }}/.sync.success'
+
+  create-venv:
+    deps: ['.task']
+    cmds:
+      - 'rm -fr -- {{ .VENV }}'
+      - 'uv venv --python={{ .PYTHON_MINOR_VERSION }} -- {{ .VENV }}'
+      - '{{ .PRINTF_CACHEDIR_TAG_CONTENT }} > {{ .VENV }}/{{ .CACHEDIR_TAG }}'
+      - 'touch -- {{ .VENV }}/.create.success'
+    status:
+      - 'test -f {{ .VENV }}/.create.success'
+      - 'test "$({{ .VENV }}/bin/python -c "import sys; print(\".\".join(map(str, sys.version_info[:2])))")" = {{ .PYTHON_MINOR_VERSION }}'
+
+  compile-requirements:
+    deps: ['.task']
+    cmds:
+      - 'uv pip compile
+          --annotation-style=split
+          --no-header
+          --output-file={{ .REQUIREMENTS_TXT }}
+          --python-version={{ .PYTHON_MINOR_VERSION }}
+          {{ .CLI_ARGS }}
+          -- {{ .REQUIREMENTS_IN }}'
+    sources:
+      - '{{ .REQUIREMENTS_IN }}'
+    generates:
+      - '{{ .REQUIREMENTS_TXT }}'
+    status:
+      - '{{ empty .CLI_ARGS | ternary "true" "false" }}'
+
+  .task:
+    run: 'once'
+    silent: true
+    cmds:
+      - 'rm -f -- .task/.success'
+      - 'mkdir -p -- .task'
+      - '{{ .PRINTF_CACHEDIR_TAG_CONTENT }} > .task/{{ .CACHEDIR_TAG }}'
+      - 'touch -- .task/.success'
+    status:
+      - 'test -f .task/.success'
