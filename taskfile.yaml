@@ -63,8 +63,9 @@ tasks:
       - '{{ empty .CLI_ARGS | ternary "true" "false" }}'
 
   .task:
-    run: 'once'
+    internal: true
     silent: true
+    run: 'once'
     cmds:
       - 'rm -f -- .task/.success'
       - 'mkdir -p -- .task'
