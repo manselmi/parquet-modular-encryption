@@ -1,3 +1,8 @@
+# vim: set ft=yaml :
+#
+# https://taskfile.dev
+
+
 version: '3'
 
 set: ['errexit', 'nounset', 'pipefail']
@@ -5,8 +10,6 @@ set: ['errexit', 'nounset', 'pipefail']
 vars:
   # Cache Directory Tagging Specification
   #   https://bford.info/cachedir/
-  #   https://restic.readthedocs.io/en/latest/040_backup.html#excluding-files
-  #   https://www.gnu.org/software/tar/manual/html_node/exclude.html#index-exclude_002dcaches
   CACHEDIR_TAG: 'CACHEDIR.TAG'
   PRINTF_CACHEDIR_TAG_CONTENT: 'printf %s Signature:\ 8a477f597d28d172789f06886806bc55'
   PYTHON_MINOR_VERSION: '3.12'
