@@ -71,6 +71,8 @@ the DEK.
 
 * [Task](https://taskfile.dev)
 
+* [uv](https://github.com/astral-sh/uv#readme)
+
 * Python 3.12. Prepare a virtual environment by running the following code:
 
     ``` shell
