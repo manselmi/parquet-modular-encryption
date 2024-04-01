@@ -76,7 +76,7 @@ the DEK.
 * Python 3.12. Prepare a virtual environment by running the following code:
 
     ``` shell
-    task venv
+    task uv:venv
     source -- .venv/bin/activate
     ```
 
