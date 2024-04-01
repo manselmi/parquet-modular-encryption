@@ -9,7 +9,6 @@ set: ['errexit', 'nounset', 'pipefail']
 
 includes:
   uv:
-    # https://changit.bwh.harvard.edu/nhlmi/manselmi-toybox/blob/main/local/Users/nhlmi/.taskfiles/uv/taskfile.yaml
     taskfile: '{{ env "TASKFILE_INCLUDES_ROOT_DIR" }}/uv'
     vars:
       PYTHON_MINOR_VERSION: '3.12'
