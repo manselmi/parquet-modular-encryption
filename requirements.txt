@@ -21,7 +21,7 @@ h11==0.14.0
     # via
     #   httpcore
     #   uvicorn
-httpcore==1.0.4
+httpcore==1.0.5
     # via httpx
 httptools==0.6.1
     # via uvicorn
@@ -33,7 +33,7 @@ idna==3.6
 numpy==1.26.4
     # via pyarrow
 pyarrow==15.0.2
-pycparser==2.21
+pycparser==2.22
     # via cffi
 pydantic==2.6.4
     # via fastapi

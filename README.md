@@ -76,8 +76,6 @@ the DEK.
 * Python 3.12. Prepare a virtual environment by running the following code:
 
     ``` shell
-    # https://changit.bwh.harvard.edu/nhlmi/manselmi-toybox/tree/main/local/Users/nhlmi/.taskfiles
-    export TASKFILE_INCLUDES_ROOT_DIR=…
     task uv:venv
     source -- .venv/bin/activate
     ```

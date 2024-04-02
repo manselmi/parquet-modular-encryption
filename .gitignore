@@ -80,6 +80,13 @@
 .*[-_]cache/
 .cache/
 
+# dbt
+#   https://docs.getdbt.com/faqs/Git/gitignore
+dbt_modules/
+dbt_packages/
+logs/
+target/
+
 # DuckDB
 #   https://github.com/duckdb/duckdb#readme
 *.wal
@@ -198,6 +205,17 @@ pom.xml.tag
 pom.xml.versionsBackup
 release.properties
 target/
+
+# Nextflow
+#   https://www.nextflow.io
+.nextflow/*
+!.nextflow/config
+.nextflow?*
+dag-*.html
+report-*.html
+timeline-*.html
+trace-*.txt
+work/
 
 # Python
 #   https://github.com/github/gitignore/blob/main/Python.gitignore
@@ -318,10 +336,12 @@ vignettes/*.pdf
 !*.sops.*
 
 # Syncthing
-#   https://github.com/github/gitignore/blob/main/Global/Syncthing.gitignore
+#   https://syncthing.net
 .stfolder/
 .stignore
 .stversions/
+.syncthing.*
+~syncthing~*
 
 # Task
 #   https://taskfile.dev
