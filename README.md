@@ -71,6 +71,8 @@ the DEK.
 
 * [Task](https://taskfile.dev)
 
+* `TASKFILE_INCLUDES_ROOT_DIR` environment variable and "uv" taskfile (see `taskfile.yaml`)
+
 * [uv](https://github.com/astral-sh/uv#readme)
 
 * Python 3.12. Prepare a virtual environment by running the following code:

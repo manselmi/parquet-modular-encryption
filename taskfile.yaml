@@ -7,12 +7,10 @@ version: '3'
 
 set: ['errexit', 'nounset', 'pipefail']
 
+# https://changit.bwh.harvard.edu/nhlmi/manselmi-toybox/tree/main/local/Users/nhlmi/.taskfiles
 includes:
+
   uv:
-    taskfile: "{{ if env \"TASKFILE_INCLUDES_ROOT_DIR\" }}\
-                 {{ env \"TASKFILE_INCLUDES_ROOT_DIR\" }}\
-               {{ else }}\
-                 {{ fail \"The TASKFILE_INCLUDES_ROOT_DIR environment variable must point to a directory with these files: https://changit.bwh.harvard.edu/nhlmi/manselmi-toybox/tree/main/local/Users/nhlmi/.taskfiles\" }}\
-               {{ end }}/uv"
+    taskfile: '{{ env "TASKFILE_INCLUDES_ROOT_DIR" }}/uv'
     vars:
       PYTHON_MINOR_VERSION: '3.12'
