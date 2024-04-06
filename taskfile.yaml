@@ -7,10 +7,10 @@ version: '3'
 
 set: ['errexit', 'nounset', 'pipefail']
 
-# https://changit.bwh.harvard.edu/nhlmi/manselmi-toybox/tree/main/local/Users/nhlmi/.taskfiles
 includes:
 
+  # https://changit.bwh.harvard.edu/nhlmi/manselmi-toybox/tree/main/local/Users/nhlmi/.taskfile/include/uv
   uv:
-    taskfile: '{{ env "TASKFILE_INCLUDES_ROOT_DIR" }}/uv'
+    taskfile: '{{ env "TASKFILE_INCLUDE_ROOT_DIR" }}/uv'
     vars:
       PYTHON_MINOR_VERSION: '3.12'

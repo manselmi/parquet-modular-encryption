@@ -71,7 +71,7 @@ the DEK.
 
 * [Task](https://taskfile.dev)
 
-* `TASKFILE_INCLUDES_ROOT_DIR` environment variable and "uv" taskfile (see `taskfile.yaml`)
+* `TASKFILE_INCLUDE_ROOT_DIR` environment variable and "uv" taskfile (see `taskfile.yaml`)
 
 * [uv](https://github.com/astral-sh/uv#readme)
 
