@@ -16,7 +16,7 @@ cffi==1.16.0
 click==8.1.7
     # via uvicorn
 cryptography==42.0.5
-fastapi==0.110.1
+fastapi==0.110.2
 h11==0.14.0
     # via
     #   httpcore
