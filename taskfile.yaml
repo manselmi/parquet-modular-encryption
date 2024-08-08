@@ -1,0 +1,37 @@
+# vim: set ft=yaml :
+#
+# https://taskfile.dev
+
+
+version: '3'
+
+set: ['errexit', 'nounset', 'pipefail']
+
+vars:
+  VENV: '{{ .VENV | default ".venv" }}'
+  PYTHON: '{{ .VENV }}/bin/python'
+
+includes:
+
+  uv:
+    taskfile: '.taskfile-library/include/uv'
+    vars:
+      PYTHON_MINOR_VERSION: '3.12'
+      VENV: '{{ .VENV }}'
+
+tasks:
+
+  serve:
+    deps: ['uv:venv']
+    cmds:
+      - '{{ .PYTHON | shellQuote }} kms_server.py'
+
+  write:
+    deps: ['uv:venv']
+    cmds:
+      - '{{ .PYTHON | shellQuote }} write_encrypted_parquet.py'
+
+  read:
+    deps: ['uv:venv']
+    cmds:
+      - '{{ .PYTHON | shellQuote }} read_encrypted_parquet.py'
