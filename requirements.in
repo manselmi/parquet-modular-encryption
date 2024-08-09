@@ -1,9 +1,0 @@
-# vim: set ft=requirements :
-
-
-cryptography
-fastapi
-httpx
-pyarrow
-pydantic
-uvicorn[standard]

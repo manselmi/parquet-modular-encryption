@@ -69,24 +69,14 @@ the DEK.
 
 ## Prerequisites
 
-* [Task](https://taskfile.dev)
-
-* [uv](https://github.com/astral-sh/uv#readme)
-
-* Python 3.12
-
-* Initialize Git submodules:
-
-    ``` shell
-    git submodule update --init --recursive
-    ```
+* [Pixi](https://pixi.sh)
 
 ## Example
 
 Launch the KMS (key management service).
 
 ``` shell
-task serve
+pixi run serve
 ```
 
 Explore the KMS' [OpenAPI specification](http://localhost:8001/docs). Try POSTing the JSON payload
@@ -107,13 +97,13 @@ Write an encrypted Parquet dataset with columns of varying privilege levels to t
 directory.
 
 ``` shell
-task write
+pixi run write
 ```
 
 Read the entire dataset from the `dataset` directory.
 
 ``` shell
-task read
+pixi run read
 ```
 
 Edit `read_encrypted_parquet.py` and experiment with different combinations of `KMS_ACCESS_TOKEN`
