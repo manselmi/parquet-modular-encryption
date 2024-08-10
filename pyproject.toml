@@ -29,7 +29,8 @@ write = { cmd = ['python', 'write_encrypted_parquet.py'] }
 read = { cmd = ['python', 'read_encrypted_parquet.py'] }
 
 [tool.pixi.environments]
-lint = { features = ['lint'] }
+default = { solve-group = 'default' }
+lint = { features = ['lint'], solve-group = 'default' }
 
 [tool.pixi.feature.lint.pypi-dependencies]
 pre-commit = { version = '*' }
