@@ -71,11 +71,11 @@ the DEK.
 
 * [Pixi](https://pixi.sh)
 
-Configure Git hooks:
+* Configure Git hooks:
 
-``` shell
-pixi run -- pre-commit-install
-```
+    ``` shell
+    pixi run -- pre-commit-install
+    ```
 
 ## Example
 
