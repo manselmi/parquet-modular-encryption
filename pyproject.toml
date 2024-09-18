@@ -19,10 +19,10 @@ python = { version = '>=3.12.5,<3.13' }
 
 [tool.pixi.pypi-dependencies]
 cryptography = { version = '>=43.0.1' }
-fastapi = { version = '>=0.114.1' }
+fastapi = { version = '>=0.115.0' }
 httpx = { version = '>=0.27.2' }
 pyarrow = { version = '>=17.0.0' }
-pydantic = { version = '>=2.9.1' }
+pydantic = { version = '>=2.9.2' }
 uvicorn = { version = '>=0.30.6', extras = ['standard'] }
 
 [tool.pixi.tasks]
