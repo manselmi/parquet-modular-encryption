@@ -15,13 +15,13 @@ platforms = [
 ]
 
 [tool.pixi.dependencies]
-python = { version = '>=3.12.7,<3.13' }
+python = { version = '>=3.13.0,<3.14' }
 
 [tool.pixi.pypi-dependencies]
 cryptography = { version = '>=43.0.3' }
-fastapi = { version = '>=0.115.3' }
+fastapi = { version = '>=0.115.4' }
 httpx = { version = '>=0.27.2' }
-pyarrow = { version = '>=17.0.0' }
+pyarrow = { version = '>=18.0.0' }
 pydantic = { version = '>=2.9.2' }
 uvicorn = { version = '>=0.32.0', extras = ['standard'] }
 
