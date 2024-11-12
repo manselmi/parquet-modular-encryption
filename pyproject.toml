@@ -19,7 +19,7 @@ python = { version = '>=3.13.0,<3.14' }
 
 [tool.pixi.pypi-dependencies]
 cryptography = { version = '>=43.0.3' }
-fastapi = { version = '>=0.115.4' }
+fastapi = { version = '>=0.115.5' }
 httpx = { version = '>=0.27.2' }
 pyarrow = { version = '>=18.0.0' }
 pydantic = { version = '>=2.9.2' }
@@ -37,7 +37,7 @@ lint = { features = ['lint'], solve-group = 'default' }
 [tool.pixi.feature.lint.pypi-dependencies]
 pre-commit = { version = '>=4.0.1' }
 pre-commit-hooks = { version = '>=5.0.0' }
-ruff = { version = '>=0.7.2' }
+ruff = { version = '>=0.7.3' }
 
 [tool.pixi.feature.lint.tasks]
 lint = { depends-on = ['pre-commit-run'] }
