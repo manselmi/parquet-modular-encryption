@@ -15,14 +15,14 @@ platforms = [
 ]
 
 [tool.pixi.dependencies]
-python = { version = '>=3.13.0,<3.14' }
+python = { version = '>=3.13.1,<3.14' }
 
 [tool.pixi.pypi-dependencies]
 cryptography = { version = '>=44.0.0' }
-fastapi = { version = '>=0.115.5' }
-httpx = { version = '>=0.28.0' }
+fastapi = { version = '>=0.115.6' }
+httpx = { version = '>=0.28.1' }
 pyarrow = { version = '>=18.1.0' }
-pydantic = { version = '>=2.10.2' }
+pydantic = { version = '>=2.10.3' }
 uvicorn = { version = '>=0.32.1', extras = ['standard'] }
 
 [tool.pixi.tasks]
@@ -37,7 +37,7 @@ lint = { features = ['lint'], solve-group = 'default' }
 [tool.pixi.feature.lint.pypi-dependencies]
 pre-commit = { version = '>=4.0.1' }
 pre-commit-hooks = { version = '>=5.0.0' }
-ruff = { version = '>=0.8.1' }
+ruff = { version = '>=0.8.2' }
 
 [tool.pixi.feature.lint.tasks]
 lint = { depends-on = ['pre-commit-run'] }
