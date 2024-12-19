@@ -22,8 +22,8 @@ cryptography = { version = '>=44.0.0' }
 fastapi = { version = '>=0.115.6' }
 httpx = { version = '>=0.28.1' }
 pyarrow = { version = '>=18.1.0' }
-pydantic = { version = '>=2.10.3' }
-uvicorn = { version = '>=0.32.1', extras = ['standard'] }
+pydantic = { version = '>=2.10.4' }
+uvicorn = { version = '>=0.34.0', extras = ['standard'] }
 
 [tool.pixi.tasks]
 serve = { cmd = ['python', 'kms_server.py'] }
@@ -37,7 +37,7 @@ lint = { features = ['lint'], solve-group = 'default' }
 [tool.pixi.feature.lint.pypi-dependencies]
 pre-commit = { version = '>=4.0.1' }
 pre-commit-hooks = { version = '>=5.0.0' }
-ruff = { version = '>=0.8.2' }
+ruff = { version = '>=0.8.4' }
 
 [tool.pixi.feature.lint.tasks]
 lint = { depends-on = ['pre-commit-run'] }
