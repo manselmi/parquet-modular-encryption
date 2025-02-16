@@ -15,10 +15,10 @@ platforms = [
 ]
 
 [tool.pixi.dependencies]
-python = { version = '>=3.13.1,<3.14' }
+python = { version = '>=3.13.2,<3.14' }
 
 [tool.pixi.pypi-dependencies]
-cryptography = { version = '>=44.0.0' }
+cryptography = { version = '>=44.0.1' }
 fastapi = { version = '>=0.115.8' }
 httpx = { version = '>=0.28.1' }
 pyarrow = { version = '>=19.0.0' }
