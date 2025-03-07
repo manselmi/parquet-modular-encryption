@@ -18,8 +18,8 @@ platforms = [
 python = { version = '>=3.13.2,<3.14' }
 
 [tool.pixi.pypi-dependencies]
-cryptography = { version = '>=44.0.1' }
-fastapi = { version = '>=0.115.10' }
+cryptography = { version = '>=44.0.2' }
+fastapi = { version = '>=0.115.11' }
 httpx = { version = '>=0.28.1' }
 pyarrow = { version = '>=19.0.1' }
 pydantic = { version = '>=2.10.6' }
