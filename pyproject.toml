@@ -15,15 +15,15 @@ platforms = [
 ]
 
 [tool.pixi.dependencies]
-python = { version = '>=3.13.3,<3.14' }
+python = { version = '>=3.13.5,<3.14' }
 
 [tool.pixi.pypi-dependencies]
-cryptography = { version = '>=44.0.2' }
-fastapi = { version = '>=0.115.12' }
+cryptography = { version = '>=45.0.6' }
+fastapi = { version = '>=0.116.1' }
 httpx = { version = '>=0.28.1' }
-pyarrow = { version = '>=19.0.1' }
-pydantic = { version = '>=2.11.3' }
-uvicorn = { version = '>=0.34.0', extras = ['standard'] }
+pyarrow = { version = '>=21.0.0' }
+pydantic = { version = '>=2.11.7' }
+uvicorn = { version = '>=0.35.0', extras = ['standard'] }
 
 [tool.pixi.tasks]
 serve = { cmd = ['python', 'kms_server.py'] }
@@ -35,9 +35,9 @@ default = { solve-group = 'default' }
 lint = { features = ['lint'], solve-group = 'default' }
 
 [tool.pixi.feature.lint.pypi-dependencies]
-pre-commit = { version = '>=4.2.0' }
-pre-commit-hooks = { version = '>=5.0.0' }
-ruff = { version = '>=0.11.5' }
+pre-commit = { version = '>=4.3.0' }
+pre-commit-hooks = { version = '>=6.0.0' }
+ruff = { version = '>=0.12.8' }
 
 [tool.pixi.feature.lint.tasks]
 lint = { depends-on = ['pre-commit-run'] }
