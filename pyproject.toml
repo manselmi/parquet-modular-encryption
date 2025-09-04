@@ -15,10 +15,10 @@ platforms = [
 ]
 
 [tool.pixi.dependencies]
-python = { version = '>=3.13.5,<3.14' }
+python = { version = '>=3.13.7,<3.14' }
 
 [tool.pixi.pypi-dependencies]
-cryptography = { version = '>=45.0.6' }
+cryptography = { version = '>=45.0.7' }
 fastapi = { version = '>=0.116.1' }
 httpx = { version = '>=0.28.1' }
 pyarrow = { version = '>=21.0.0' }
@@ -37,7 +37,7 @@ lint = { features = ['lint'], solve-group = 'default' }
 [tool.pixi.feature.lint.pypi-dependencies]
 pre-commit = { version = '>=4.3.0' }
 pre-commit-hooks = { version = '>=6.0.0' }
-ruff = { version = '>=0.12.8' }
+ruff = { version = '>=0.12.11' }
 
 [tool.pixi.feature.lint.tasks]
 lint = { depends-on = ['pre-commit-run'] }
