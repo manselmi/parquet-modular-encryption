@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # vim: set ft=python :
 
+from __future__ import annotations
+
 import base64
 import binascii
 from enum import Enum
@@ -52,7 +54,7 @@ class WrapRequestBody(Model):
     _decoded_key: bytes = PrivateAttr()
 
     @model_validator(mode="after")
-    def decode_key(self) -> "WrapRequestBody":
+    def decode_key(self) -> WrapRequestBody:
         decoded_key = _decode_key(self.key)
 
         if len(decoded_key) < 16:
@@ -67,7 +69,7 @@ class UnwrapRequestBody(Model):
     _decoded_key: bytes = PrivateAttr()
 
     @model_validator(mode="after")
-    def decode_key(self) -> "UnwrapRequestBody":
+    def decode_key(self) -> UnwrapRequestBody:
         decoded_key = _decode_key(self.key)
 
         if len(decoded_key) < 24:
@@ -82,7 +84,7 @@ class ResponseBody(Model):
     decoded_key: bytes = Field(..., exclude=True)
 
     @model_validator(mode="after")
-    def encode_key(self) -> "ResponseBody":
+    def encode_key(self) -> ResponseBody:
         self.key = base64.b64encode(self.decoded_key).decode()
         return self
 
