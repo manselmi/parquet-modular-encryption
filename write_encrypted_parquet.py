@@ -29,15 +29,13 @@ def write_to_dataset(table, root_path, **kwargs):
 
 
 def main():
-    schema = pa.schema(
-        [
-            pa.field("id", pa.int64(), nullable=False),
-            pa.field("date_of_birth", pa.date32()),
-            pa.field("first_name", pa.string()),
-            pa.field("last_name", pa.string()),
-            pa.field("social_security_number", pa.string()),
-        ]
-    )
+    schema = pa.schema([
+        pa.field("id", pa.int64(), nullable=False),
+        pa.field("date_of_birth", pa.date32()),
+        pa.field("first_name", pa.string()),
+        pa.field("last_name", pa.string()),
+        pa.field("social_security_number", pa.string()),
+    ])
 
     table = pa.Table.from_pylist(
         [
