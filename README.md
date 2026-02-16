@@ -74,7 +74,7 @@ the DEK.
 * Configure Git hooks:
 
     ``` shell
-    pixi run -- pre-commit-install
+    pixi run -- prek-install
     ```
 
 ## Example
