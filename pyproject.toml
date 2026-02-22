@@ -10,39 +10,26 @@ channels = ['conda-forge']
 platforms = [
   'linux-64',
   'linux-aarch64',
-  'osx-64',
   'osx-arm64',
 ]
 
 [tool.pixi.dependencies]
-python = { version = '>=3.14.3,<3.15' }
+python = { version = '>=3.14,<3.15' }
 
 [tool.pixi.pypi-dependencies]
-cryptography = { version = '>=46.0.5' }
-fastapi = { version = '>=0.129.0' }
-httpx = { version = '>=0.28.1' }
-pyarrow = { version = '>=23.0.0' }
-pydantic = { version = '>=2.12.5' }
-uvicorn = { version = '>=0.40.0', extras = ['standard'] }
-
-[tool.pixi.tasks]
-serve = { cmd = ['python', 'kms_server.py'] }
-write = { cmd = ['python', 'write_encrypted_parquet.py'] }
-read = { cmd = ['python', 'read_encrypted_parquet.py'] }
+cryptography = { version = '*' }
+fastapi = { version = '*' }
+httpx = { version = '*' }
+pyarrow = { version = '*' }
+pydantic = { version = '*' }
+uvicorn = { version = '*', extras = ['standard'] }
 
 [tool.pixi.environments]
 default = { solve-group = 'default' }
 lint = { features = ['lint'], solve-group = 'default' }
 
-[tool.pixi.feature.lint.dependencies]
-prek = { version = '>=0.3.2' }
-ruff = { version = '>=0.15.1' }
-
-[tool.pixi.feature.lint.tasks]
-lint = { depends-on = ['prek-run'] }
-# https://github.com/prefix-dev/pixi/discussions/1897
-prek-install = { cmd = ['prek', 'install', '-f'] }
-prek-run = { cmd = ['prek', 'run', '--all-files'] }
+[tool.pixi.feature.lint.pypi-dependencies]
+ruff = { version = '*' }
 
 
 [tool.ruff]

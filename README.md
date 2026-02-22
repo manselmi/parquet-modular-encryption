@@ -69,20 +69,18 @@ the DEK.
 
 ## Prerequisites
 
-* [Pixi](https://pixi.sh)
+* [mise](https://mise.jdx.dev/)
 
-* Configure Git hooks:
-
-    ``` shell
-    pixi run -- prek-install
-    ```
+``` shell
+mise run install
+```
 
 ## Example
 
 Launch the KMS (key management service).
 
 ``` shell
-pixi run -- serve
+mise run serve
 ```
 
 Explore the KMS' [OpenAPI specification](http://localhost:8001/docs). Try POSTing the JSON payload
@@ -103,13 +101,13 @@ Write an encrypted Parquet dataset with columns of varying privilege levels to t
 directory.
 
 ``` shell
-pixi run -- write
+mise run write
 ```
 
 Read the entire dataset from the `dataset` directory.
 
 ``` shell
-pixi run -- read
+mise run read
 ```
 
 Edit `read_encrypted_parquet.py` and experiment with different combinations of `KMS_ACCESS_TOKEN`
