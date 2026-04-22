@@ -71,10 +71,6 @@ the DEK.
 
 * [mise](https://mise.jdx.dev/)
 
-``` shell
-mise run install
-```
-
 ## Example
 
 Launch the KMS (key management service).
