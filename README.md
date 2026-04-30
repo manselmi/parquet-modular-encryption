@@ -69,7 +69,7 @@ the DEK.
 
 ## Prerequisites
 
-* [mise](https://mise.jdx.dev/)
+* [mise](https://mise.en.dev/)
 
 ## Example
 
