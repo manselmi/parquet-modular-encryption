@@ -33,7 +33,8 @@ run = 'pixi run -- ./read_encrypted_parquet.py'
 run = 'pixi run -- ./kms_server.py'
 
 [tasks.upgrade]
-run = ['mise upgrade --local', 'pixi update']
+env.MISE_LOCKED = '0'
+run = ['mise upgrade --local', 'mise lock', 'pixi update']
 
 [tasks.write]
 run = 'pixi run -- ./write_encrypted_parquet.py'
