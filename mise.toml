@@ -36,6 +36,8 @@ run = 'pixi run -- ./read_encrypted_parquet.py'
 run = 'pixi run -- ./kms_server.py'
 
 [tasks.upgrade]
+# required to correctly initialize lockfile when locked = true as of 2026.5.16
+env.MISE_LOCKED = '0'
 run = ['mise upgrade --local', 'mise lock', 'pixi update']
 
 [tasks.write]
