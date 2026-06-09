@@ -47,4 +47,3 @@ run = 'pixi run -- ./write_encrypted_parquet.py'
 [tools]
 hk = 'latest'
 pixi = 'latest'
-pkl = 'latest'
