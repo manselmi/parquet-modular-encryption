@@ -7,7 +7,7 @@ import ssl
 from enum import StrEnum
 
 import pyarrow.parquet.encryption as pe
-from httpx import Client, Headers, Timeout
+from httpx2 import Client, Headers, Timeout
 
 
 class WrappingKeyId(StrEnum):

@@ -19,7 +19,7 @@ python = { version = '>=3.14,<3.15' }
 [tool.pixi.pypi-dependencies]
 cryptography = { version = '*' }
 fastapi = { version = '*' }
-httpx = { version = '*' }
+httpx2 = { version = '*' }
 pyarrow = { version = '*' }
 pydantic = { version = '*' }
 uvicorn = { version = '*', extras = ['standard'] }
