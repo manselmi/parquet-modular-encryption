@@ -21,7 +21,7 @@ class KmsClient(pe.KmsClient):
     BASE_PATH = "/api/v1/"
     WRAP_ENDPOINT = "wrap/"
     UNWRAP_ENDPOINT = "unwrap/"
-    TOKEN_HEADER = "x-api-key"
+    TOKEN_HEADER = "x-api-key"  # noqa:S105
 
     def __init__(self, kms_connection_config):
         super().__init__()

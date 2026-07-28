@@ -135,7 +135,7 @@ header_scheme = APIKeyHeader(name="x-api-key", auto_error=False)
 @router.post("/wrap/{wrapping_key_id}", response_model=ResponseBody, tags=[KEY_WRAPPING_TAG])
 async def wrap_key(wrapping_key_id: WrappingKeyIdPath, wrap_request_body: WrapRequestBody) -> Any:
     wrapping_key = WrappingKey[wrapping_key_id].value
-    wrapped_key = aes_key_wrap(wrapping_key, wrap_request_body._decoded_key)
+    wrapped_key = aes_key_wrap(wrapping_key, wrap_request_body._decoded_key)  # noqa:SLF001
     return ResponseBody(decoded_key=wrapped_key)
 
 
@@ -148,7 +148,7 @@ async def unwrap_key(
     await unwrap_authz(wrapping_key_id, api_key)
     wrapping_key = WrappingKey[wrapping_key_id].value
     try:
-        unwrapped_key = aes_key_unwrap(wrapping_key, unwrap_request_body._decoded_key)
+        unwrapped_key = aes_key_unwrap(wrapping_key, unwrap_request_body._decoded_key)  # noqa:SLF001
     except InvalidUnwrap as exc:
         raise HTTPException(
             status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,

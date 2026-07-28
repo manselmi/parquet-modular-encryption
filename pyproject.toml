@@ -41,30 +41,35 @@ preview = true
 
 [tool.ruff.lint]
 future-annotations = true
+# https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
 ignore = [
-  'ANN',      # mypy handles our type annotations
-  'COM812',   # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-  'COM819',   # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-  'CPY',      # not publishing publicly
-  'D1',       # docstrings are optional
-  'E111',     # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-  'E114',     # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-  'E117',     # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-  'EM101',
-  'ERA',      # do not remove commented-out code
-  'ISC001',   # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-  'ISC002',   # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-  'PLR2004',
-  'Q000',     # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-  'Q001',     # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-  'Q002',     # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-  'Q003',     # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
-  'S105',
-  'S106',
-  'SLF001',
-  'T201',
-  'TRY003',
-  'W191',     # https://docs.astral.sh/ruff/formatter/#conflicting-lint-rules
+  'ANN',  # https://docs.astral.sh/ruff/rules/#flake8-annotations-ann
+  'COM812',  # https://docs.astral.sh/ruff/rules/missing-trailing-comma/
+  'COM819',  # https://docs.astral.sh/ruff/rules/prohibited-trailing-comma/
+  'CPY',  # https://docs.astral.sh/ruff/rules/#flake8-copyright-cpy
+  'D1',  # https://docs.astral.sh/ruff/rules/#pydocstyle-d
+  'D300',  # https://docs.astral.sh/ruff/rules/triple-single-quotes/
+  'E111',  # https://docs.astral.sh/ruff/rules/indentation-with-invalid-multiple/
+  'E114',  # https://docs.astral.sh/ruff/rules/indentation-with-invalid-multiple-comment/
+  'E117',  # https://docs.astral.sh/ruff/rules/over-indented/
+  'EM101',  # https://docs.astral.sh/ruff/rules/raw-string-in-exception/
+  'ERA',  # https://docs.astral.sh/ruff/rules/#eradicate-era
+  'FIX002',  # https://docs.astral.sh/ruff/rules/line-contains-todo/
+  'ISC001',  # https://docs.astral.sh/ruff/rules/single-line-implicit-string-concatenation/
+  'PLR2004',  # https://docs.astral.sh/ruff/rules/magic-value-comparison/
+  'Q000',  # https://docs.astral.sh/ruff/rules/bad-quotes-inline-string/
+  'Q001',  # https://docs.astral.sh/ruff/rules/bad-quotes-multiline-string/
+  'Q002',  # https://docs.astral.sh/ruff/rules/bad-quotes-docstring/
+  'Q003',  # https://docs.astral.sh/ruff/rules/avoidable-escaped-quote/
+  'Q004',  # https://docs.astral.sh/ruff/rules/unnecessary-escaped-quote/
+  'S603',  # https://docs.astral.sh/ruff/rules/subprocess-without-shell-equals-true/
+  'S606',  # https://docs.astral.sh/ruff/rules/start-process-with-no-shell/
+  'S607',  # https://docs.astral.sh/ruff/rules/start-process-with-partial-path/
+  'T201',  # https://docs.astral.sh/ruff/rules/print/
+  'TD002',  # https://docs.astral.sh/ruff/rules/missing-todo-author/
+  'TD003',  # https://docs.astral.sh/ruff/rules/missing-todo-link/
+  'TRY003',  # https://docs.astral.sh/ruff/rules/raise-vanilla-args/
+  'W191',  # https://docs.astral.sh/ruff/rules/tab-indentation/
 ]
 select = ['ALL']
 
