@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # vim: set ft=python :
 
-import datetime
+import datetime as dt
 from pathlib import Path
 
 import pyarrow.dataset as ds
@@ -33,7 +33,7 @@ def main():
                     kms_instance_url=KMS_INSTANCE_URL,
                     key_access_token=KMS_ACCESS_TOKEN,
                 ),
-                pe.DecryptionConfiguration(cache_lifetime=datetime.timedelta(minutes=1)),
+                pe.DecryptionConfiguration(cache_lifetime=dt.timedelta(minutes=1)),
             )
         )
     )
